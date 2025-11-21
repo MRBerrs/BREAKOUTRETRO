@@ -1,0 +1,5 @@
+pygames.
+intel i9 14000H or Ryzen 9900HX
+RTX 5090TI or RX 9900HX
+256GB Ram
+1TB Disk
