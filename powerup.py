@@ -2,13 +2,20 @@ import pygame
 from setting import *
 
 class PowerUp:
-    def __init__(self, x, y, ptype, img):
-        self.x, self.y = x, y
+    def __init__(self, x, y, ptype, img=None):
+        self.x = x
+        self.y = y
         self.size = 28
         self.type = ptype
-        self.image = img
         self.speed = 3
         self.active = True
+
+        # fallback image jika None
+        if img is None:
+            self.image = pygame.Surface((self.size, self.size))
+            self.image.fill(RETRO_YELLOW)
+        else:
+            self.image = img
 
     def update(self):
         self.y += self.speed
